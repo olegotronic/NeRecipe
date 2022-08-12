@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorSurface">@color/design_default_color_background</item>
+        <item name="colorOnSurface">@color/design_default_color_secondary</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="NeRecipeTextBackground">
+        <item name="android:background">@color/shadow_text_background</item>
+    </style>
+
+    <style name="NeRecipeDragBackground">
+        <item name="android:background">@drawable/bg_circle</item>
+    </style>
+
+    <style name="NeRecipeLayerBackground">
+        <item name="android:background">@color/cardview_dark_background</item>
+    </style>
+
+</resources>

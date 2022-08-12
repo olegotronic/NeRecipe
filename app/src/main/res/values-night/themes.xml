@@ -1,0 +1,35 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.NeRecipe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Widget.AppTheme.FavoriteButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="icon">@drawable/ic_favorites_selector_24dp</item>
+        <item name="iconTint">@color/favorites_checkbox_tint</item>
+        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="background">@drawable/bg_circle_shadow</item>
+        <item name="android:minWidth">@dimen/icon_button_min_size</item>
+        <item name="android:minHeight">@dimen/icon_button_min_size</item>
+    </style>
+
+    <style name="Widget.AppTheme.DragButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="icon">@drawable/ic_drag_handle_black_24dp</item>
+        <item name="background">@drawable/bg_circle</item>
+        <item name="android:background">@drawable/bg_circle</item>
+        <item name="backgroundColor">@drawable/bg_circle</item>
+        <item name="android:minWidth">@dimen/icon_button_min_size</item>
+        <item name="android:minHeight">@dimen/icon_button_min_size</item>
+    </style>
+
+</resources>

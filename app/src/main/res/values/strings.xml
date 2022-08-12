@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name" translatable="false">NeRecipe</string>
+    <string name="save">Save</string>
+    <string name="add_item">New recipe</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_remove">Remove</string>
+    <string name="options">Options</string>
+    <string name="recipe_list">Recipe list</string>
+    <string name="favorites">Favorites</string>
+    <string name="dish_name">Dish name</string>
+    <string name="author">Author</string>
+    <string name="recipe_text">Recipe text</string>
+    <string name="alert_recipe_empty_field">is empty!</string>
+    <string name="category">Category</string>
+    <string name="european">European</string>
+    <string name="asian">Asian</string>
+    <string name="pan_asian">Pan-Asian</string>
+    <string name="eastern">Eastern</string>
+    <string name="american">American</string>
+    <string name="russian">Russian</string>
+    <string name="mediterranean">Mediterranean</string>
+    <string name="category_filter">Category filter</string>
+    <string name="search">Search</string>
+    <string name="choose_picture">Choose picture…</string>
+    <string name="recipe_picture">Recipe picture</string>
+    <string name="no_category_alert">No category selected!</string>
+</resources>

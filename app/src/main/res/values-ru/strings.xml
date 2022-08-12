@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_remove">Удалить</string>
+    <string name="add_item">Новый рецепт</string>
+    <string name="save">Записать</string>
+    <string name="menu_edit">Редактировать</string>
+    <string name="options">Действия</string>
+    <string name="recipe_list">Список рецептов</string>
+    <string name="favorites">Избранное</string>
+    <string name="dish_name">Название блюда</string>
+    <string name="author">Автор</string>
+    <string name="recipe_text">Текст рецепта</string>
+    <string name="category">Категория</string>
+    <string name="european" >Европейская</string>
+    <string name="asian" >Азиатская</string>
+    <string name="pan_asian">Паназиатская</string>
+    <string name="eastern">Восточная</string>
+    <string name="american">Американская</string>
+    <string name="russian">Русская</string>
+    <string name="mediterranean">Средиземноморская</string>
+    <string name="alert_recipe_empty_field">не заполнено!</string>
+    <string name="category_filter">Фильтр категорий</string>
+    <string name="search">Поиск</string>
+    <string name="choose_picture">Выберите фото…</string>
+    <string name="recipe_picture">Фото рецепта</string>
+    <string name="no_category_alert">Не выбрана ни одна категория!</string>
+</resources>

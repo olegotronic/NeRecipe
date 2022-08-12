@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recipesListFragment">
+
+    <fragment
+        android:id="@+id/recipesListFragment"
+        android:name="ru.netology.nerecipe.ui.RecipeListFragment"
+        tools:layout="@layout/recipe_list_fragment">
+        <action
+            android:id="@+id/fromListToEdit"
+            app:destination="@id/recipeEditFragment" />
+        <action
+            android:id="@+id/fromListToView"
+            app:destination="@id/recipeViewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeEditFragment"
+        android:name="ru.netology.nerecipe.ui.RecipeEditFragment"
+        tools:layout="@layout/recipe_edit_fragment">
+        <argument
+            android:name="recipeId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeViewFragment"
+        android:name="ru.netology.nerecipe.ui.RecipeViewFragment"
+        android:label="post_view_fragment"
+        tools:layout="@layout/recipe_view_fragment">
+        <action
+            android:id="@+id/fromViewToEdit"
+            app:destination="@id/recipeEditFragment" />
+        <argument
+            android:name="recipeId"
+            app:argType="long" />
+    </fragment>
+
+</navigation>

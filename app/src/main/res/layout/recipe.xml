@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/common_spacing"
+    android:layout_marginVertical="@dimen/minimal_spacing"
+    app:cardCornerRadius="@dimen/minimal_spacing"
+    app:cardElevation="@dimen/minimal_spacing"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/recipePicture"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:contentDescription="@string/recipe_picture"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_meal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/recipePictureFull"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:contentDescription="@string/recipe_picture"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_meal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/drag_image"
+            style="@style/NeRecipeDragBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_spacing"
+            android:padding="2dp"
+            android:src="@drawable/ic_drag_handle_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFavorites"
+            style="@style/Widget.AppTheme.FavoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_spacing"
+            android:checkable="true"
+            android:contentDescription="@string/favorites"
+            android:padding="2dp"
+            app:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/pictureBarrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="recipePicture, recipePictureFull" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recipeDescription"
+            style="@style/NeRecipeTextBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/common_spacing"
+            android:paddingBottom="@dimen/minimal_spacing"
+            app:layout_constraintTop_toBottomOf="@+id/pictureBarrier">
+
+            <TextView
+                android:id="@+id/dishName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textSize="@dimen/header_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/author"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Русский борщ" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@id/categoryText"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="В. Похлебкин" />
+
+            <TextView
+                android:id="@+id/categoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                tools:text="Русская" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/m_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="recipeDescription"
+            app:layout_constraintTop_toBottomOf="@id/recipeDescription" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:paddingHorizontal="@dimen/common_spacing"
+            android:paddingVertical="@dimen/common_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/m_divider"
+            tools:text="Нарезать, сварить, наложить" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

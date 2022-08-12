@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/list"
+        android:icon="@drawable/ic_baseline_recipe_list_24dp"
+        android:title="@string/recipe_list"
+        android:drawable="@color/black"
+         />
+    <item
+        android:id="@+id/favorites"
+        android:icon="@drawable/ic_baseline_favorites_24dp"
+        android:title="@string/favorites"
+        android:drawable="@color/black"
+        />
+</menu>

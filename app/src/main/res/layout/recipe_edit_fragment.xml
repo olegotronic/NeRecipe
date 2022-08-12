@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/NeRecipeLayerBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RecipeEditFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_spacing">
+
+            <ImageView
+                android:id="@+id/recipe_picture"
+                android:layout_width="match_parent"
+                android:layout_height="192dp"
+                android:contentDescription="@string/recipe_picture"
+                android:paddingBottom="@dimen/common_spacing"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_meal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/choose_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shadow_text_background"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/choose_picture"
+                android:textColor="@color/white"
+                android:textSize="@dimen/maximal_text"
+                app:layout_constraintBottom_toBottomOf="@id/recipe_picture"
+                app:layout_constraintEnd_toEndOf="@id/recipe_picture"
+                app:layout_constraintStart_toStartOf="@id/recipe_picture"
+                app:layout_constraintTop_toTopOf="@id/recipe_picture" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dishNameTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dish_name"
+                app:layout_constraintTop_toBottomOf="@id/recipe_picture">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dishName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/authorTIL"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/author"
+                app:layout_constraintTop_toBottomOf="@id/dishNameTIL">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/categoryMenu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/category"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/authorTIL">
+
+                <AutoCompleteTextView
+                    android:id="@+id/categoryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_spacing"
+                android:background="@android:color/transparent"
+                android:gravity="start|top"
+                android:hint="@string/recipe_text"
+                android:inputType="textMultiLine"
+                app:layout_constraintTop_toBottomOf="@id/categoryMenu"
+                tools:ignore="Autofill" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/save"
+        app:layout_anchor="@id/bottomAppBar"
+        app:srcCompat="@drawable/ic_baseline_save_24dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
